@@ -2,13 +2,18 @@ package com.superapp.expense_tracker.model;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.Generated;
+import lombok.NoArgsConstructor;
 
 
+@Builder
+@Data
 @Entity
 @Table(name = "expense")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Expense {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
